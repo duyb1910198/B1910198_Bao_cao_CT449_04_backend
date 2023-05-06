@@ -9,11 +9,10 @@ class PostService {
         const post = {
             image: payload.image,
             title: payload.title,
-            author: payload.author, 
+            author: payload.author,
             des: payload.des,
             completed: payload.completed,
         };
-        // Remove undefined fields
         Object.keys(post).forEach(
             (key) => post[key] === undefined && delete post[key]
         );
@@ -34,7 +33,7 @@ class PostService {
         const cursor = await this.Post.find(filter);
         return await cursor.toArray();
     }
-    
+
     async findByName(title) {
         return await this.find({
             name: { $regex: new RegExp(title), $options: "i" },

@@ -1,4 +1,3 @@
-//const { MongoAPIError } = require("mongodb");
 const UserService = require("../services/user.service");
 const MongoDB = require("../utils/mongodb.util");
 const ApiError = require("../api-error");

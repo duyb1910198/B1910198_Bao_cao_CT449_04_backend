@@ -1,4 +1,3 @@
-//const { MongoAPIError } = require("mongodb");
 const PostService = require("../services/post.service");
 const MongoDB = require("../utils/mongodb.util");
 const ApiError = require("../api-error");
@@ -115,33 +114,3 @@ exports.deleteAll = async (_req, res, next) => {
         );
     }
 };
-
-// exports.create = (req, res) => {
-//     res.send({ message: "create handler" });
-//  };
-
-//  exports.findAll = (req, res) => {
-//     res.send({ message: "findAll handler" });
-//  };
-
-// exports.findOne = (req, res) => {
-//    res.send({ message: "findOne handler" });
-// };
-
-// exports.update = (req, res) => {
-//    res.send({ message: "update handler" });
-// };
-
-// exports.delete = (req, res) => {
-//    res.send({ message: "Contact was deleted successfully" });
-// };
-
-// exports.deleteAll = (req, res) => {
-//    res.send({ message: "deleteAll handler" });
-// };
-
-// exports.findAllFavorite = (req, res) => {
-//     res.send({ message: "findAllFavorite handler" });
-// };
-
-
